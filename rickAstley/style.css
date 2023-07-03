@@ -1,0 +1,1217 @@
+    
+    /*******************************/
+   /*  VUT FIT ITW project n. 2   */
+  /**        April 2022         **/
+ /***  Author: Martin Herbst  ***/
+/*******************************/
+
+/* fungování tláčítek je popsáno v souboru script.js */
+/* vlastnosti (které jsou pro obě rozlišení stejné) jsou okomentovány až v sekce pro stránku 900px +, u rozlišení pro mobily se často mění jen velikost elementů */
+html{   
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{                                /* ::-webkit-scrollbar-... stylování vzhledu scrollbaru */
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: #C2C2C2;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #272429;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 900px){          /* sekce stylů pro stránku o šířce maximálně 900px */
+                                                    /* narozdíl od většího rozlišení jsou zde nadpisy sekcí pozicovány na střed - pro lepší orientaci na mobilním zařízení */
+    body{
+        background-color: #3c3c3c;  /* u tohot rozlišení je obrázek na pozadí zcela zbytečný */
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 100%;
+    }
+    button{
+        cursor: pointer;
+    }   
+    header{
+        top: 0;
+    }
+    #navigation{                /* některé vlastnosti navigace u tohoto rozlišení jsou udány pomocí vh - pro lepší responzivní vlastnosti */
+        width: 100%;
+        top: 0;
+        position: fixed;                            
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        z-index: 100000;
+        padding: 0px 0px 0px 1px;
+    }
+    #navigation #logo-cont{         /* funguje jako odkaz na absolutní url */
+        width: 6vh;                                 
+        height: 6vh;
+        position: relative;
+        font-weight: 700;
+        transition: 0.6s;
+        background-image: url("images/SVG.png");
+        object-fit: cover;
+        background-size: cover;
+        border-radius: 100px;
+        margin-left: 1%;
+        border: 2px solid black;
+    }
+    #navigation #logo-cont:hover{
+        box-shadow: black 0px 0px 4px; 
+    }
+    #navigation ul{
+        display: flex;
+        position: relative;
+    }
+    #navigation ul li{
+        list-style: none;
+        position: relative;
+    }
+    #navigation ul li a{
+        float: right;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: 0.6s;
+        padding-left: 1vh;
+        padding-right: 1vh;
+        font-family: 'Secular One', sans-serif;
+        text-shadow: white 0px 0px 1px;
+        border-bottom: 2px solid white;
+        text-transform: uppercase;
+        font-size: 1.2vh;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+    #navigation ul li a:hover{
+        background-color: white;
+    }
+    #navigation.sticky ul li a:hover{
+        color: black;
+    }
+    #navigation.sticky{
+        background: #272429;
+        border-bottom: 1px solid white;
+        transition: 0.6s;
+    }
+    #navigation.sticky #logo-cont{
+        background-image: url("images/SVG2.png");
+        border: 2px solid white;
+    }
+    #navigation.sticky #logo-cont:hover{
+        box-shadow: white 0px 0px 4px; 
+    }
+    #navigation.sticky ul li a{
+        color: white;
+        text-shadow: none;
+        border: none;
+    }
+    header #header-cont{
+        display: flex;
+        background: url("images/background1.png");
+        background-color: #aba8b6;
+        background-size: 125%;
+        background-size: cover;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        z-index: 10000;
+        height: 200px;
+        position: relative;
+    }
+    header #header-head{
+        position: absolute;
+        left: 10%;
+        top: 10%;
+    }
+    header #header-head h1{
+        width: 100%;
+        border-bottom: 1px solid white;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: 'Oleo Script', cursive;
+        text-shadow: white 1px 1px 6px;
+        padding-top: 12vh;
+        line-height: 0.9;
+        font-size: 100%;
+    }
+    header #header-head h2{
+        font-family: 'Arizonia', cursive;
+        font-weight: 1;
+        color: white;
+        text-shadow: black 2px 1px 4px;
+        font-size: 100%;
+    }
+    header #header-icon{
+        position: absolute;
+        right: 50%;
+        bottom: 5%;
+    }
+    header #header-icon a{
+        color: white;
+        transition: 0.5s;
+        text-shadow: black 0px 0px 4px;
+        font-size: 10px;
+    }
+    header #header-icon a:hover{
+        color: #9e58a1;
+        text-shadow: white 0px 12px 1px;
+    }
+    #main-intro{
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: -1;
+        text-align: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    #main-intro #quote{
+        font-family: 'Merienda One', cursive;
+        font-weight: 1;
+        color: white;
+        font-size: smaller;
+        text-shadow: black 1px 1px 1px;
+        font-size: 5px;
+        padding-top: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    #main-intro #quote::before{
+        content: open-quote;
+    }
+    #main-intro #quote::after{
+        content: close-quote;
+    }
+    #main-intro #author{
+        font-family: 'Clicker Script', cursive;
+        color: white;
+        text-shadow: black 1px 1px 1px;
+        padding-top: 5px;
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+    #main-part{
+        background: url("images/microphone-background.png")
+        repeat fixed 100%;
+        background-color:#272429;
+        object-fit: cover;
+        background-size: cover;
+        background-position: 100%;
+    }
+    #first-section{
+        position: relative;
+        padding-bottom: 5%;
+        border-bottom: 1px solid #C2C2C2;
+        overflow: hidden;
+        height: auto;
+        overflow: auto;
+        padding-top: 10vh;
+    }
+    #first-section .heading{
+        position: relative;
+        width: 60%;
+        top: 10px;
+        text-align: center;
+        left: 20%;
+    }
+    #first-section .heading h3{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 10%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #first-section .first-appear{
+        background-color: #B9B5CC;
+        position: relative;
+        width: 60%;
+        top: 20px;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+    }
+    #first-section .first-appear:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #first-section .first-fade{
+        width: 60%;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+        background-color: #B9B5CC;
+        position: relative;
+        visibility: hidden;
+    }
+    #first-section .first-fade:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #first-section button{
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: white 0 0 1px;
+    }
+    #first-section .first{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 1px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: relative;
+        width: 80%;
+        opacity: 0;
+        left: 10%;
+        margin-top: 10px;
+    }
+    #first-section p{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 10px;
+        margin: 2px 2px 2px 2px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    #second-section{
+        position: relative;
+        border-bottom: 1px solid #C2C2C2;
+        overflow: hidden;
+        height: auto;
+        overflow: auto;
+        padding-top: 10vh;
+        height: 650px;
+    }
+    #second-section .heading{
+        position: relative;
+        width: 60%;
+        top: 10px;
+        text-align: center;
+        left: 20%;
+    }
+    #second-section .heading h3{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 10%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #second-section .Appear_second1{
+        background-color: #B9B5CC;
+        position: relative;
+        width: 60%;
+        top: 20px;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+    }
+    #second-section .Appear_second2{
+        background-color: #B9B5CC;
+        position: relative;
+        width: 60%;
+        top: 25px;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+    }
+    #second-section .Appear_second3{
+        background-color: #B9B5CC;
+        position: relative;
+        width: 60%;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+        top: 30px;
+    }
+    #second-section .Fade_section2{
+        background-color: #B9B5CC;
+        position: relative;
+        width: 60%;
+        text-align: center;
+        left: 20%;
+        font-size: 10px;
+        visibility: hidden;
+        top: 35px;
+    }
+    #second-section .Appear_second1:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #second-section .Appear_second2:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #second-section .Appear_second3:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #second-section .Fade_section2:hover{
+        background-color: white;
+        box-shadow: white 0 0 2px;
+    }
+    #second-section button{
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: white 0 0 1px;
+    }
+    #second-section #Early_life{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 80%;
+        opacity: 0;
+        margin-left: 10%;
+        top: 175px;
+    }
+    #second-section #Succes{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 80%;
+        opacity: 0;
+        margin-left: 10%;
+        top: 175px;
+    }
+    #second-section #Retirement{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 80%;
+        opacity: 0;
+        margin-left: 10%;
+        top: 175px;
+    }
+    #second-section p{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 10px;
+        margin: 2px 2px 2px 2px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    #Early_life .firstImg{
+        width: 50px;
+        margin: 2px;
+        float: left;
+        border: 1px solid white;
+        margin-right: 5px;
+    }
+    #Early_life .secondImg{
+        width: 60px;
+        margin: 2px;
+        float: right;
+        border: 1px solid white;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    #Succes .firstImg{
+        width: 60px;
+        margin: 2px;
+        float: left;
+        border: 1px solid white;
+        margin-right: 5px;
+    }
+    #Succes .secondImg{
+        width: 50px;
+        margin: 2px;
+        float: right;
+        border: 1px solid white;
+        margin-left: 5px;
+    }
+    #Retirement .firstImg{
+        width: 60px;
+        float: left;
+        margin: 2px;
+        border: 1px solid white;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #Retirement .secondImg{
+        width: 50px;
+        float: right;
+        margin: 2px;
+        border: 1px solid white;
+        margin-left: 5px;
+    }
+    #third-section{
+        position: relative;
+        padding-bottom: 5%;
+        border-bottom: 1px solid #C2C2C2;
+        overflow: hidden;
+        height: auto;
+        overflow: auto;
+        padding-top: 10vh;
+    }
+    #third-section .heading{
+        position: relative;
+        width: 60%;
+        top: 10px;
+        text-align: center;
+        left: 20%;
+    }
+    #third-section .heading h3{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 10%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #discography{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: 80%;
+        justify-items: center;
+        align-items: center;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    #discography a{
+        text-decoration: none;
+        margin: 10px 0 0 10px;
+        padding: 0;
+    }
+    #discography div{
+        background-color: #B9B5CC;
+        border: 1px solid black;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 3px;
+        width: 150px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    #discography div h4{
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 10px;
+    }
+    #discography div:hover{
+        background-color: white;
+        box-shadow: 0 0 2px white;
+    }
+    #fourth-section{
+        position: relative;
+        overflow: auto;
+        padding-bottom: 10vh;
+    }
+    #fourth-section .heading{
+        position: relative;
+        width: 60%;
+        top: 10px;
+        text-align: center;
+        left: 20%;
+    }
+    #fourth-section .heading h3{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 2px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 10%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #fourth-section .get-started{
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    #fourth-section .get-started a{
+        text-decoration: none;
+    }
+    #fourth-section .get-started a h2{
+        background-color: white;
+        border-radius: 5x;
+        border: 1px solid black;
+        border-radius: 7px;
+        color: black;
+        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        transition: 0.5s;
+        font-size: 15%;
+        padding: 10px 15px 10px 15px;
+    }
+    #fourth-section .get-started a h2:hover{
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 4px white;
+    }
+    #footer{
+        background: #272429;
+        position: relative;
+        height: 60px;
+        border-top: 1px dashed #595959;
+    }
+    #footer .footer-text{
+        color: #595959;
+        position: absolute;
+        left: 30%;
+        top: 20%;
+        font-size: 6px;
+        width: 100px;
+    }
+    #footer .socials{
+        position: absolute;
+        left: 30%;
+        bottom: 10%;
+    }
+    #footer .socials a{
+        color: steelblue;
+        opacity: 50%;
+    }
+    #footer .socials a:hover{
+        opacity: 100;
+    }
+    #footer .socials i{
+        margin-right: 6px;
+        font-size: 15px;
+    }
+    #footer .footer-text-author{
+        color: #595959;
+        position: absolute;
+        left: 30%;
+        bottom: 43%;
+        font-size: 6px;
+    }
+}
+/* u sekce 1 a sekce 2 mají blocky s textem výchozí opacity nastaveno na 0, po kliknutí na tlačítko se opacity změní podle potřeby */
+/* zároveň se v těchto sekcích pozicuje absolutně, jelikož jsou blocky umístěny přes sebe */
+@media only screen and (min-width: 900px){              /* sekce stylů pro stránku o šířce 900px a více */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    button{
+        cursor: pointer;
+        border: none;
+    }
+    body{
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 4000px;                                      /* maximalní šířka stránky */
+        background: url("images/stage.png") repeat fixed 50%;
+        background-color: grey;
+        background-size: cover;
+        object-fit: cover;
+        background-position: 100% 50%;
+        z-index: 100000;
+        box-shadow: 0 0 800px white;
+    }
+    header{
+        width: 100%;
+        top: 0;
+        overflow: hidden;
+    }
+    #navigation{
+        max-width: 4000px;                                      /* maximální šířka navigace */
+        top: 0;
+        position: fixed;                                        /* fixní pozice navigace */
+        width: 100%;                                            
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.7s;
+        z-index: 100000;
+        padding: 8px 5% 8px 5%;
+    }
+    #navigation .logo{                                  /* funguje jako odkaz na absolutní url */
+        width: 60px;
+        height: 60px;
+        position: relative;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        background-image: url("images/SVG.png");
+        object-fit: cover;
+        background-size: cover;
+        border-radius: 100px;
+        border: 4px solid black;
+    }
+    #navigation .logo:hover{
+        box-shadow: black 0px 0px 25px; 
+    }
+    #navigation ul{
+        position: relative;                     /* horizontální seřazení seznamu */
+        display: flex;                          /* elementy ul jsou k sobě relevantní */
+        justify-content: center;
+        align-items: center;
+    }
+    #navigation ul li{
+        position: relative;
+        list-style: none;
+    }
+    #navigation ul li a{
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: 0.7s;
+        padding-left: 50px;
+        padding-right: 50px;
+        letter-spacing: 1px;
+        font-family: 'Secular One', sans-serif;
+        padding-top: 39px;
+        padding-bottom: 28px;
+        text-shadow: white 1px 1px 1px;
+        border-bottom: 2px solid white;
+        text-transform: uppercase;
+    }
+    #navigation ul li a:hover{
+        background-color: white;
+    }
+    #navigation.sticky ul li a:hover{
+        color: black;
+    }
+    #navigation.sticky{
+        background: #272429;
+        padding-bottom: 20px;
+        padding-top: 15px;
+        border-bottom: 1px solid white;
+        transition: 0.7s;
+    }
+    #navigation.sticky .logo{
+        background-image: url("images/SVG2.png");
+        border: 4px solid white;
+    }
+    #navigation.sticky .logo:hover{
+        box-shadow: white 0px 0px 25px; 
+    }
+    #navigation.sticky ul li a{
+        color: white;
+        text-shadow: none;
+        padding-top: 39px;                          /* při těchto hodnotách paddingu prvky nepřesahují mimo navigaci */
+        padding-bottom: 39px;
+        border: none;
+    }
+    header #header-cont{                            
+        width: 100%;
+        position: relative;                         /* obal sekce je k jeho potomkům relativní, potomci se následně pozicují absolutně k rodiči */
+        height: 820px;
+        background: url("images/background1.png") repeat fixed 100%;
+        background-color: #aba8b6;
+        background-size: 125%;
+        background-size: cover;
+        object-fit: cover;
+        z-index: 10000;
+    }
+    header #header-head{
+        position: absolute;
+        top: 300px;
+        left: 15%;                                              
+        font-size: 350%;
+        transition: 0.8s;
+        z-index: 1;
+    }
+    header #header-head h1{
+        padding-left: 10px;
+        outline-offset: -15px;
+        border-bottom: 2px solid white;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-family: 'Oleo Script', cursive;
+        text-shadow: white 1px 1px 6px;
+    }
+    header #header-head h2{
+        font-family: 'Arizonia', cursive;
+        font-weight: 1;
+        color: white;
+        text-shadow: black 2px 1px 4px;
+        font-size: 100%;
+        padding-left: 10px;
+    }
+    header #header-img{
+        position: absolute;
+        right: 20%;
+        bottom: 0;
+        background-image: url("images/avatar2.png");
+        height: 614px;
+        width: 640px;
+        object-fit: cover;
+        background-size: 100%;
+    }
+    header #header-icon{
+        position: absolute;
+        right: 50%;
+        bottom: 2%;
+    }
+    header #header-icon a{
+        color: white;
+        transition: 0.5s;
+        text-shadow: black 0px 0px 4px;
+    }
+    header #header-icon a:hover{
+        color: #9e58a1;
+        text-shadow: white 0px 12px 1px;
+    }
+    #main-intro{
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    #main-intro #quote{
+        font-family: 'Merienda One', cursive;
+        font-weight: 1;
+        color: white;
+        padding-top: 50px;
+        font-size: smaller;
+        text-shadow: black 1px 1px 1px;
+    }
+    #main-intro #quote::before{
+        content: open-quote;
+    }
+    #main-intro #quote::after{
+        content: close-quote;
+    }
+    #main-intro #author{
+        padding-top: 10px;
+        font-family: 'Clicker Script', cursive;
+        color: white;
+        text-shadow: black 1px 1px 1px;
+        font-size: 20px;
+    }
+    #main-part{
+        background: url("images/microphone-background.png") repeat fixed 100%;
+        background-color:#272429;
+        object-fit: cover;
+        background-size: cover;
+        background-position: 100%;
+    }
+    #first-section{                                  
+        height: 1100px;
+        position: relative;             /* obal sekce je k jeho potomkům relativní, potomci se následně pozicují absolutně k rodiči */
+        border-bottom: 1px solid #C2C2C2;
+        overflow: auto;
+    }
+    #first-section .heading{
+        position: absolute;
+        width: 10%;
+        top: 100px;
+        text-align: right;
+        padding-bottom: 350px;              /* padding 350 z důvodu designu - pomocí border right se pak zobrazí svislice vedoucí k tlačítku */
+        border-right: 1px dashed #C2C2C2;
+    }
+    #first-section .heading h3{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 100%;
+        padding-right: 10px;
+    }
+    #first-section .first-appear{       /* tlačítka v první sekci jsou pozicovány přes sebe, když se klikne na first-appear, tak zmizí a objeví se first-fade */
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 400px;
+        background-color: #B9B5CC;
+        position: absolute;
+    }
+    #first-section .first-appear::after{    /* tato sekce definuje vlevo od tlačítka border, který je konkrétně posunutý vlevo, aby zakrýval svislici od headingu */
+        content: "";
+        border-left: 4px solid black;   
+        position: absolute;
+        inset: 0;
+        transform: translate(-3px);
+    }
+    #first-section .first-appear:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #first-section .first-fade{
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 400px;
+        background-color: #B9B5CC;
+        position: absolute;
+        visibility: hidden;
+    }
+    #first-section .first-fade::after{      /* tato sekce definuje vlevo od tlačítka border, který je konkrétně posunutý vlevo, aby zakrýval svislici od headingu */
+        content: "";
+        border-left: 4px solid black;
+        position: absolute;
+        inset: 0;
+        transform: translate(-3px);
+    }
+    #first-section .first-fade:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #first-section button{
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: white 0 0 3px;
+    }
+    #first-section .first{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 60%;
+        margin-left: 35%;
+        opacity: 0;
+        margin-top: 250px;
+    }
+    #first-section p{
+        font-family: 'Work Sans', sans-serif;
+        margin: 20px 15px 20px 15px;
+        font-size: larger;
+    }
+    #second-section{
+        height: 2000px;
+        position: relative;             /* obal sekce je k jeho potomkům relativní, potomci se následně pozicují absolutně k rodiči */
+        border-bottom: 1px solid #C2C2C2;
+        overflow: auto;
+    }
+    #second-section .heading{              
+        position: absolute;         
+        width: 10%;
+        top: 100px;
+        text-align: right;
+        padding-bottom: 960px;          /* padding 960 z důvodu designu - pomocí border right se pak zobrazí svislice vedoucí k tlačítku */
+        border-right: 1px dashed #C2C2C2;
+    }
+    #second-section .heading h3{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 100%;
+        padding-right: 10px;
+    }
+    #second-section .Appear_second1{
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 600px;
+        background-color: #B9B5CC;
+        position: absolute;
+    }
+    #second-section .Appear_second2{
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 800px;
+        background-color: #B9B5CC;
+        position: absolute;
+    }
+    #second-section .Appear_second3{
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 1000px;
+        background-color: #B9B5CC;
+        position: absolute;
+    }
+    #second-section .Fade_section2{
+        height: 100px;
+        width: 15%;
+        margin-left: 10%;
+        margin-top: 1200px;
+        background-color: #B9B5CC;
+        position: absolute;
+        visibility: hidden;
+    }
+    #second-section .Appear_second1:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #second-section .Appear_second2:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #second-section .Appear_second3:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #second-section .Fade_section2:hover{
+        background-color: white;
+        box-shadow: white 0 0 14px;
+    }
+    #second-section button{
+        font-family: 'Rajdhani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: white 0 0 3px;
+    }
+    #second-section button::after{  /* tato sekce definuje vlevo od tlačítek border, který je konkrétně posunutý vlevo, aby zakrýval svislici od headingu */
+        content: "";
+        border-left: 4px solid black;
+        position: absolute;
+        inset: 0;
+        transform: translate(-3px);
+    }
+    #second-section #Early_life{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 60%;
+        opacity: 0;
+        margin-left: 35%;
+        margin-top: 560px;
+    }
+    #second-section #Succes{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 60%;
+        opacity: 0;
+        margin-left: 35%;
+        margin-top: 560px;
+    }
+    #second-section #Retirement{
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        text-align: justify;
+        transition: 0.5s;
+        position: absolute;
+        width: 60%;
+        opacity: 0;
+        margin-left: 35%;
+        margin-top: 560px;
+    }
+    #second-section p{
+        font-family: 'Work Sans', sans-serif;
+        margin: 20px 15px 20px 15px;
+        font-size: larger;
+    }
+    #Early_life .firstImg{
+        height: 15%;
+        width: 15%;
+        margin: 20px;
+        float: left;
+        box-shadow: 0 0 0 2px white;
+    }
+    #Early_life .secondImg{
+        height: 15%;
+        width: 23%;
+        margin: 20px;
+        float: right;
+        box-shadow: 0 0 0 2px white;
+        margin-bottom: 50px;
+    }
+    #Succes .firstImg{
+        height: 20%;
+        width: 20%;
+        margin: 20px;
+        float: left;
+        box-shadow: 0 0 0 2px white;
+    }
+    #Succes .secondImg{
+        height: 15%;
+        width: 15%;
+        margin: 20px;
+        float: right;
+        box-shadow: 0 0 0 2px white;
+        margin-bottom: 50px;
+    }
+    #Retirement .firstImg{
+        height: 20%;
+        width: 20%;
+        margin: 20px;
+        float: left;
+        box-shadow: 0 0 0 2px white;
+    }
+    #Retirement .secondImg{
+        height: 10%;
+        width: 10%;
+        margin: 20px;
+        float: right;
+        box-shadow: 0 0 0 2px white;
+        margin-bottom: 50px;
+    }
+    #third-section{
+        position: relative;         /* zde je pozicování relativní - zde již nejsou žádné elementy umístěny přes sebe */
+        overflow: hidden;
+        border-bottom: 1px solid #C2C2C2;
+        padding-bottom: 100px;
+    }
+    #third-section .heading{
+        position: absolute;
+        width: 22%;
+        top: 100px;
+        text-align: right;
+    }
+    #third-section .heading h3{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 100%;
+        padding-right: 10px;
+    }
+    #third-section #discography{
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;                   
+        width: 50%;
+        justify-items: center;
+        align-items: center;
+        display: flex;                  /* použit display flex se zalamováním elementů pod sebe */
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    #third-section #discography a{
+        text-decoration: none;
+        margin: 20px 0 0 20px;
+        padding: 0;
+    }
+    #third-section #discography div{
+        background-color: #B9B5CC;
+        border: 2px solid black;
+        width: 400px;
+        height: 100px;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+    #third-section #discography div h4{
+        color: black;
+        padding-top: 40px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    #third-section #discography div:hover{
+        background-color: white;
+        box-shadow: 0 0 10px white;
+    }
+    #fourth-section{
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+    }
+    #fourth-section .heading{
+        position: absolute;
+        width: 22%;
+        top: 100px;
+        text-align: right;
+    }
+    #fourth-section .heading h3{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #3c3c3c;
+        box-shadow: 0 0 4px white;
+        color: #EEEEEE;
+        transition: 0.5s;
+        font-size: 100%;
+        padding-right: 10px;
+    }
+    #fourth-section .get-started{
+        text-align: center;
+        margin: auto;
+        width: 350px;
+        margin-top: 100px;
+    }
+    #fourth-section .get-started a{
+        text-decoration: none;
+    }
+    #fourth-section .get-started a h2{
+        width: 350px;
+        height: 150px;
+        background-color: white;
+        padding-top: 16%;
+        border-radius: 30px;
+        border: 2px solid black;
+        color: black;
+        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        transition: 0.5s;
+    }
+    #fourth-section .get-started a h2:hover{
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 10px white;
+    }
+    #footer{
+        height: 200px;
+        background: #272429;
+        position: relative;
+        border-top: 1px dashed #595959; 
+    }
+    #footer .footer-text{
+        color: #595959;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 15%;
+        top: 20%;
+    }
+    #footer .socials{
+        position: absolute;
+        right: 15%;
+        top: 20%;
+    }
+    #footer .socials a{
+        color: steelblue;
+        opacity: 50%;
+    }
+    #footer .socials a:hover{
+        opacity: 100;
+    }
+    #footer .socials i{
+        margin-right: 15px;
+    }
+    #footer .footer-text-author{
+        color: #595959;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 15%;
+        top: 30%;
+    }
+}

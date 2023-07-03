@@ -1,0 +1,455 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MH Portfolio</title>
+        <link rel="icon" type="image/png" href="images/title-icon.png">
+        <!--Bootstrap import-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+        
+        <!--title icon-->
+        <link rel="icon" href="images/CSSicon.png" type="image/icon">  
+        <!--Font Awesome Icons--> 
+        <script src="https://kit.fontawesome.com/e63623efef.js" crossorigin="anonymous"></script>
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Ubuntu:wght@300&&family=Nothing+You+Could+Do&family=Nabla&family=Indie+Flower&family=Michroma&display=swap" rel="stylesheet">
+        <!--Fonts:  font-family: 'Ubuntu', sans-serif;      ... slim ... Maven Pro (there are thicker)
+                    font-family: 'Nothing You Could Do', cursive;
+                    font-family: 'Indie Flower', cursive;
+                    font-family: 'Michroma', sans-serif;
+        -->
+        <!--CSS-->
+        <link rel="stylesheet" href="styles.css">
+        <!--JS-->
+        <script defer src="main.js"></script>
+        
+    </head>
+    <body>
+        <!-- MODAL START -->
+        <div class="modal fade" id="paraZHorModal" tabindex="-1" aria-labelledby="paraZHorModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title bg-dark text-light container-fluid rounded" id="paraZHorModalLabel">Pára z Hor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Pára z Hor</strong> is my first website, which I created for a client.</p>
+                        <p>This website was created for a steam car wash situated in my hometown. It's created only with <strong>HTML5, CSS3 and a few JavaScript functions</strong>.</p>
+                        <p>Although <strong>I can  now see imperfections</strong> <span class="text-muted">(such as using only media queries causing the css code being way longer than necessary)</span>,
+                            I think that this page is a <strong>nice example of how well I understand CSS</strong>. I am <strong>able to create</strong> a good looking website <strong>without
+                            using any external libraries</strong>.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="carWash/index.html" target="_blank" class="btn btn-primary">Visit</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- MODAL START -->
+        <div class="modal fade" id="rickAstleyWeb" tabindex="-1" aria-labelledby="rickAstleyWebLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title bg-dark text-light container-fluid rounded" id="rickAstleyWebLabel">My first project</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <p>This was my very first website that I've done completely by myself.</p>
+                    <div class="modal-body">
+                        <p>It was part of my semestr project in optional subject <kbd>ITW</kbd> on <kbd>VUT</kbd> <kbd>FIT</kbd>. We were supposed to create a website focusing on a famous person.
+                            And because our teacher <abbr title="Rickrolling is an internet meme involving music video for the 1987 song ,Never Gonna Give You Up' performed by Rick Astley.">
+                            rick-rolled</abbr> us several times during the semestr, I decided to rick-roll him back with my project. 
+                        </p>
+                        <p>Because <strong>it was created in my early days</strong> of creating websites, this <strong>page is very basic and not that good looking</strong>. I simply like to look back at where my passion started. 
+                            It makes me feel good about myself knowing how far I got. 
+                        </p>
+                        <p class="justify"><strong>Please take this website with a grain of salt</strong>.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="rickAstley/index.html" target="_blank" class="btn btn-primary">Visit</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- MODAL START -->
+        <div class="modal fade" id="thisPortfolio" tabindex="-1" aria-labelledby="thisPortfolioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title bg-dark text-light container-fluid rounded" id="thisPortfolioLabel">My Portfolio Website</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Every web developer has to have his own portfolio website so I decided to create one for myself aswell.</p>
+                        <p>This page started as a some kind of ,training' for me, but somewhere in the process I decided to make it my portfolio page.</p>
+                        <p>I would divide this page into <strong>two parts</strong>. The first part, which consist of the <strong>header</strong> 
+                            and the second part, which includes <strong>the rest of te body</strong>.
+                        </p>
+                        <p><strong>The difference</strong> between these two parts <strong>is the method used</strong>. The <strong>header is made 
+                            with no external sources</strong>. Just pure html and css. The menu with help of JavaScript.
+                        </p>
+                        <p>On the other hand I styled <strong>the main part</strong> of the page with <strong>Bootstrap 5</strong> library.</p>
+                        <p>
+                            I recently found out that the Bootstrap is a great tool, which makes the creating of the page much quicker and smoother, but <strong>I'm glad that I didn't use it before</strong>,
+                            because <strong>first of all</strong> it's important to <strong>learn the basics properly</strong> and make sure you are able to create it on your own.
+                        </p>
+                        <p><strong>Just for the record:</strong> I didn't use only Bootstrap 5. Everything is finished with custom css styling and some details with media queries.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- MODAL START -->
+        <div class="modal fade" id="atomsJavaScript" tabindex="-1" aria-labelledby="atomsJavaScriptLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title bg-dark text-light container-fluid rounded" id="atomsJavaScriptLabel">Atoms - JavaScript Project Made With a Book</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>With improving my HTML and CSS skills <strong>it was now time to focus on JavaScript.</strong></p>
+                        <p>After some time I have found fantastic book helping me with this next step.</p>
+                        <p>
+                            The book is called <kbd>"JavaScript: Programátorské techniky a webové technologie"</kbd> by author <a href="https://github.com/ondras" target="_blank"><code>Ondřej Žára</code></a>.
+                            This book helped me understand JavaScript a lot more and gave me a lot of experience, I learned <kbd>new techniques</kbd>, <kbd>new methods of development</kbd> and ended up
+                            with this interesting product - game <kbd>Atoms</kbd>.
+                        </p>
+                        <p>
+                            <strong>Now I'm ready to use this new experience in my own projects.</strong> 
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://atoms-javascript-project.w3spaces.com/" target="_blank" class="btn btn-primary">Visit</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- MODAL START -->
+        <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="mowal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h1>Thank you for contacting me!</h1>
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <header class="img-slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div id="header-menu">
+                <div class="logo">
+                    <a href="#contacts">MH</a>
+                </div>
+                <div class="menu-btn">
+                    <div class="menu-btn-burger"><!--BURGER--></div>
+                </div>  
+                <div class="menu">
+                    <ul>
+                        <li><a href="#biography-begin">biography</a></li>
+                        <li><a href="#career-begin">career</a></li>
+                        <li><a href="#projects-begin">projects</a></li>
+                        <li><a href="#contacts-begin">contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="header-introduction">
+                <div class="menu-content">
+                    <div class="menu-content-inside">
+                        <div class="menu-heading container">
+                            <h2>Hello,</h2>
+                            <h3>my name is</h3>
+                            <h1><span class="name">Martin</span> <span class="surname">Herbst</span></h1>
+                            <h3 class="text-center">junior <kbd>web</kbd> developer</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="caption">
+                    <span class="caption-span">Contact me on</span>
+                    <div class="text-box">
+                        <div><a href="https://www.linkedin.com/in/martin-herbst-b43557244/" target="_blank"><span style="color: whitesmoke;">LinkedIn</span> <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></div>
+                        <div><a href="https://www.instagram.com/_martin_herbst_/" target="_blank"><span style="color: whitesmoke;">Instagram</span> <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></div>
+                        <div><a href="#contacts-begin"><span style="color: whitesmoke;">herbst.mrtn@gmail.com</span> <i class="fa-solid fa-copy"></i></a></div>
+                        <div><a href="#contacts-begin"><span style="color: whitesmoke;">+420</span> <span style="color: #ffffff;">776 778 130</span> <i class="fa-solid fa-copy"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </header>   
+        <main> 
+            <div id="biography" class="">
+                <div class="biography-content container mt-5 mb-5">
+                    <div class="row move-in-left">
+                        <div class="col">
+                            <hr id="biography-begin" class="text-light">
+                            <p class="badge rounded-pill text-dark bg-light"><small>Biography</small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-5">
+                            <div class="move-in-left">
+                                <h2 class="text-dark rounded bg-light ps-1 pb-1">About Me</h2>  
+                                <img class="profile-img img-fluid rounded" src="images/profileWithAsta.jpg" alt="profile picture with dog">
+                                <blockquote class="blockquote-footer pt-3 text-light text-center">Me <p class="badge bg-secondary">left</p> and our dachshund Asta</blockquote>
+                            </div>
+                            <div class="move-in-left">
+                                <hr class="text-light">
+                                <h3 class="text-light rounded bg-dark ps-1 pt-1 pb-1">My skill set</h3> 
+                                <h4 class=""><small class="rounded bg-light ps-1 pe-1 pb-1">What can I do</small> <kbd>?</kbd></h4>
+                            </div>
+                            <div class="move-in-left">
+                                <ul class="nav flex-column text-light mt-2 bg-dark rounded pt-2">
+                                    <li class="nav-item mt-2 text-center ps-2 pe-2 text-light mt-1 bg-dark rounded pt-2">
+                                        <p>I manage <kbd class="bg-danger">HTML</kbd>. With that I can create the main structure of the website</p>
+                                    </li>
+                                    <li class="nav-item text-center ps-2 pe-2">
+                                        <p>With the help of <kbd class="bg-primary">CSS</kbd> I can to create user-friendly modern design</p>
+                                    </li>
+                                    <li class="nav-item text-center ps-1 pe-1">
+                                        <p>With a pinch of <kbd class="bg-warning">JavaScript</kbd> I add more features to the page</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img class="img-fluid rounded move-in-left mt-2" src="images/profileWedding.jpg" alt="profile picture">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="move-in-right">
+                                <h2 class="text-dark rounded bg-light ps-1 pb-1 mt-2">Biography</h2>
+                                <h5 class="text-light">My <kbd class="text-dark bg-light rounded-pill">life</kbd> journey</h5>
+                            </div>
+                            <div class="text-light mt-3 bg-dark rounded pt-2 pb-1 ps-3 pe-3 move-in-right">
+                                <p class="justify">Hello! My name is <span>Martin Herbst</span>, I'm 21 years old and I'm a starting web developer. I will tell you more about my web deloping journey later on.</p>
+                            </div>
+                            <div class="text-light mt-2 bg-dark rounded pt-3 pb-2 ps-3 pe-3 move-in-right">
+                                <p class="justify">I was born in <span>Jeseník</span> - a small town situated in a north-east of Czechia surrounded by beautiful nature. After 5th grade I decided to enter <span>Gymnázium Jeseník,</span> where I spent 8 years.
+                                    During those years I learnt many useful things like my <span>C1 level of english</span> and I also improved my <span>photoshop skills</span>. I also started to focus on developing my <span>creativity</span> and <span>flair for design</span>.
+                                    After graduation in 2021 I applied for the <span>University of Technology</span> <kbd>VUT</kbd> in <span>Brno</span>, specifically to the <span>Faculty of Information Technology</span> <kbd>FIT</kbd>.
+                                    After successful acceptance I started my first semestr in <span>september 2021</span>.
+                                </p>
+                            </div>
+                            <div class="text-light mt-2 bg-dark rounded pt-3 pb-2 ps-3 pe-3 move-in-right ">
+                                <p class="justify">After few months I have suddenly <span>found my true passion</span> in the IT field, unfortunatelly it is <span>not covered</span> in the <kbd>VUT</kbd> <kbd>FIT</kbd> curriculum. So after two years, in spring 2023, I decided
+                                 <span> to switch universities</span> so now I'm studying <kbd>information technology</kbd> at <kbd>Palacký University</kbd> in Olomouc,
+                                    where it's <span>more focused</span> on what I want to do in my life. And that's <span>web development</span>. And because I <span>would love to start working as a junior web developer</span> during my studies,
+                                    I decided to study <span>remotely</span>. I'm based in <span>Olomouc</span>.</p>
+                            </div>
+                            <hr class="text-light">
+                            <img class="make-me-centered img-fluid rounded move-in-right mt-1" src="images/lightCodePCsmall.jpg" alt="illustrative photo">
+                            <div class="move-in-right">
+                                <div class="text-dark mt-2 bg-light rounded pt-2 pb-1 ps-3 pe-3">
+                                    <p class="justify">I'm a <strong>purposeful</strong> young man, who wants to become <strong>the best</strong> in what he does. 
+                                    I can get along well with other people. I'm a <strong>team player</strong>. I'm someone you can <strong>count on</strong>.
+                                    I'm constantly expanding my horizons, I <strong>like to learn</strong> how to work with <strong>new technologies</strong> and I can immediately use new knowledge in my work.  
+                                    </p>   
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="career">
+                <div class="career-content container mt-5 mb-5">
+                    <div class="row">
+                        <div class="col move-in-right text-right">
+                            <hr id="career-begin" class="text-dark">
+                            <p class="badge rounded-pill text-light bg-dark"><small>Career</small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-7">
+                            <div>
+                                <h2 class="mt-2 text-dark rounded bg-light ps-1 pb-1 move-in-left">How it all started</h2>
+                                <h5 class="text-light mt-1 move-in-left">My <kbd>web</kbd> developer journey</h5>
+                                <img class="img-fluid rounded mt-2 mb-1 move-in-left" src="images/profileOnBench.jpg" alt="portrait">
+                                <p class="mt-1 justify bg-light text-dark rounded pt-3 pb-2 ps-3 pe-3 move-in-left">
+                                    My <strong>passion for web development</strong> started, when I was a teenager. In my high school IT class I was introduced to a very basic html code.
+                                    We never got deep into html, but it was enough for me to begin a <strong>journey that continues to this day</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 mt-0">
+                            <div class="how-it-started move-in-right">
+                                <p class="mt-0 justify bg-light text-dark rounded pt-3 pb-2 ps-3 pe-3 move-in-right">
+                                    Fast forward to the <strong>second semestr</strong> at VUT FIT. I signed up for an <strong>optional subject focused on creating websites</strong>. 
+                                    This probably was <strong> the first time I thought about becomming web developer</strong>, because I <strong>enjoyed every single project</strong>
+                                    we were given. <strong>I loved the synergy of coding in combination with creative work</strong>.
+                                </p>
+                                <p class="mt-0 justify bg-light text-dark rounded pt-3 pb-2 ps-3 pe-3 move-in-right">
+                                    <strong>I've come a long way</strong> since that time, <strong>improving on my own</strong>. That resulted in making <strong>my very first website for a client</strong>. You can have a look at it down below.
+                                    <strong>I am still getting better. From project to project I'm making significant progress in quality of my work. And I won't stop until I'm at the very top</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="languages">
+                <div class="container mt-5 mb-5">
+                    <div id="languages-wrap" class="row">
+                        <div class="col col-xxl-4 one top m-0" onmouseenter="changeMyPosition(1)" onmouseleave="returnMe(1)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/HTMLbackground.png" alt="HTMLbackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/HTML.png" alt="HTML">
+                        </div>
+                        <div class="col col-xxl-4 two top m-0" onmouseenter="changeMyPosition(2)" onmouseleave="returnMe(2)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/CSSbackground.png" alt="CSSbackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/CSS.png" alt="CSS">
+                        </div>
+                        <div class="col col-xxl-4 three top m-0" onmouseenter="changeMyPosition(3)" onmouseleave="returnMe(3)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/SASSbackground.png" alt="SASSbackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/SASS.png" alt="SASS">
+                        </div>
+                        <div class="col col-xxl-4 four bot m-0" onmouseenter="changeMyPosition(4)" onmouseleave="returnMe(4)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/BootstrapBackground.png" alt="BootstrapBackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/Bootstrap.png" alt="Bootstrap 5">
+                        </div>
+                        <div class="col col-xxl-4 five bot m-0" onmouseenter="changeMyPosition(5)" onmouseleave="returnMe(5)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/JSbackground.png" alt="JSbackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/JS.png" alt="JS">
+                        </div>
+                        <div class="col col-xxl-4 six bot m-0" onmouseenter="changeMyPosition(6)" onmouseleave="returnMe(6)">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/SQLbackground.png" alt="SQLbackground" style="position: absolute;">
+                            <img class="img-fluid rounded move-in-left" src="images/languages/SQL.png" alt="SQL">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects">
+                <div class="projects-content container mt-5 mb-5">
+                    <div class="row">
+                        <div class="col move-in-left text-left">
+                            <hr id="projects-begin" class="text-dark">
+                            <p class="badge rounded-pill text-dark bg-light"><small>Projects</small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-7 mt-2 mb-2" style="z-index: 1;">
+                            <h2 class="bg-light text-dark rounded ps-1 pb-1 mb-0 move-in-left">
+                                My Projects
+                            </h2>
+                            <hr>
+                            <p class="text-center mt-2 mb-0 rounded text-light bg-dark move-in-right rounded ps-1 pe-1">
+                                <small>Here you can see <strong>more information about my projects</strong> including this portfolio website.</small>
+                            </p>
+                            <p class="text-center text-light move-in-left mt-1 mb-1 ps-1 pe-1 pb-2 pt-2 bg-primary rounded">All my projects are public on my <kbd>GitHub</kbd> here: <a class="text-dark p-1 bg-info rounded" href="https://github.com/MartinHerbst">My Github</a></p>
+                            <p class="text-center text-light move-in-right rounded-pill ps-1 pe-1 bg-info"><small>Or just click the buttons below <i class="fa-solid fa-angles-down"></i></small></p>
+                            <div id="project-buttons" class="d-grid gap-3 mt-2 mb-3">
+                                <button type="button" onclick="invertIcon(1)" class="btn btn-outline-dark btn-block mt-0 mb-0 move-in-left">My First Website <i class="fa-solid fa-circle-chevron-left"></i></button>
+                                <button type="button" onclick="invertIcon(2)" class="btn btn-outline-dark btn-block mt-0 mb-0 move-in-left">Pára z Hor <i class="fa-solid fa-circle-chevron-left"></i></button>
+                                <button type="button" onclick="invertIcon(3)" class="btn btn-outline-dark btn-block mt-0 mb-0 move-in-left">This Portfolio Website <i class="fa-solid fa-circle-chevron-left"></i></button>
+                                <button type="button" onclick="invertIcon(4)" class="btn btn-outline-dark btn-block mt-0 mb-0 move-in-left">Atoms - JavaScript Project <code class="ps-2 pe-2">By a Book</code> <i class="fa-solid fa-circle-chevron-left"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 mt-0" style="z-index: 0;">
+                            <div id="project-images" class="rounded projects-icons container-fluid">
+                                <div class="project">
+                                    <!-- BUTTON MODAL START -->
+                                    <button type="button" class="btn btn-primary pe-0 ps-0 pt-0 pb-0 bg-transparent border-0 " data-bs-toggle="modal" data-bs-target="#rickAstleyWeb">
+                                        <img src="images/firstWebTemplate.png" alt="Rick Astley web" class="img-fluid d-block">
+                                    </button>
+                                    <!-- END -->
+                                </div>  
+                                <div class="project">
+                                    <!-- BUTTON MODAL START -->
+                                    <button type="button" class="btn btn-primary pe-0 ps-0 pt-0 pb-0 bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#paraZHorModal">
+                                        <img src="images/parazhorTemplate.jpg" alt="Para z Hor" class="img-fluid mx-auto">
+                                    </button>
+                                    <!-- END -->
+                                </div>
+                                <div class="project">
+                                    <!-- BUTTON MODAL START -->
+                                    <button type="button" class="btn btn-primary pe-0 ps-0 pt-0 pb-0 bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#thisPortfolio">
+                                        <img src="images/portfolioWebsiteTemplate.jpg" alt="This Portfolio Page" class="img-fluid">
+                                    </button>
+                                    <!-- END -->
+                                </div>
+                                <div class="project">
+                                    <!-- BUTTON MODAL START -->
+                                    <button type="button" class="btn btn-primary pe-0 ps-0 pt-0 pb-0 bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#atomsJavaScript">
+                                        <img src="images/atomsTemplate.png" alt="Atoms - JavaScript Project" class="img-fluid">
+                                    </button>
+                                    <!-- END -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contacts">
+                <div class="contacts-content container mt-5 mb-5">
+                    <div class="row">
+                        <div class="col move-in-right text-left">
+                            <hr id="contacts-begin" class="text-dark">
+                            <p class="badge rounded-pill text-light bg-dark"><small>Contacts</small></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-5 mt-2 mb-2">
+                            <div>
+                                <h2 class="mt-2 text-dark rounded ps-1 pb-1 move-in-left display-6 bg-light move-in-left">Contact Me</h2>
+                                <hr class="move-in-left text-light move-in-left">
+                                <div class="list-group">
+                                    <a href="https://www.linkedin.com/in/martin-herbst-b43557244/" target="_blank" class="list-group-item text-primary move-in-left">Linked<i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/_martin_herbst_/" target="_blank" class="list-group-item text-primary move-in-left">Instagram <i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="list-group-item disabled move-in-left">herbst.mrtn@gmail.com</a>
+                                    <a href="#" class="list-group-item disabled move-in-left"><small>+420</small> 776 778 130</a>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 mt-3">
+                            <form class="row g-1" action="https://formsubmit.co/22fa299f13481293e63ce8d87c1a3081" method="POST">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://mh-website.w3spaces.com">
+                                <div class="col-sm-6">
+                                    <input type="text" name="First-Name" class="form-control move-in-right" placeholder="First Name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="Last-Name" class="form-control move-in-right" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <input type="email" name="Email" class="form-control move-in-right" placeholder="E-mail" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <textarea name="Message" class="form-control move-in-right" rows="5" placeholder="Write text.." required></textarea>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-primary col-sm-12 move-in-right" data-bs-toggle="modal" data-bs-target="#formModal">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content container text-center text-muted">
+                <p><small>Made by <strong>Martin Herbst</strong> <i class="fa-regular fa-copyright"></i></small></p>
+            </div>
+        </footer>
+    </body>
+</html>
