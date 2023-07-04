@@ -543,6 +543,12 @@ main #project-images > div:nth-child(4) img{
 main #project-images > div:nth-child(4):hover {
     background: #58a48c;
 }
+main #project-images > div:nth-child(5) img{
+    border: none;
+}
+main #project-images > div:nth-child(5):hover {
+    background: #e4ece4;
+}
 main #projects .project:hover img {
     transition: 0.7s;
     border-radius: 10px;
